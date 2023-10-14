@@ -1,83 +1,39 @@
-## Xiaomi DaFang Hacks / XiaoFang 1S / Wyzecam V2 / Wyzecam Pan / Other T20 Devices
-
-[![Join the chat at https://gitter.im/Xiaomi-Dafang-Hacks/Lobby](https://badges.gitter.im/Xiaomi-Dafang-Hacks/Lobby.svg)](https://gitter.im/Xiaomi-Dafang-Hacks/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+## WyzeV2 / WyzePan DeFang Repair Repo
 
 This repository contains custom firmware for the following devices:
 
-Name | Picture
---- | ---
-Xiaomi Dafang | ![Dafang](/dafang.png)
-Xiaomi Xiaofang 1S (old Version with T20 is supported, newer Version with T20L is in beta) | ![XiaoFang](/xiaofang.png)
-Wyzecam Pan | ![Dafang](/dafang.png)
-Wyzecam V2 | ![XiaoFang](/xiaofang.png)
-Neos SmartCam | ![XiaoFang](/xiaofang.png)
-Sannce I21AG, MixSight HX-I2110T2, WanScam HW0036, Digoo BB-M2 | ![XiaoFang](/sannce.jpg)
-Any other Device with Ingenic T10/T20 Device https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks/issues/980 | ![T20](/t20.png)
+Name | Picture | | Name | Picture+
+--- | --- | --- | --- | ---
+Wyzecam V2 | ![XiaoFang](/xiaofang.png) | | Wyzecam Pan | ![Dafang](/dafang.png)
 
-If you want to test the Xiaofang T20L (newer version) please check out the [additional instructions](https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks/blob/master/hacks/install_cfw_t20l.md).
+## How to install the CFW (firmware hack)
+* Under /hacks locate the wyze model directory; rename to demo.bin and copy to the SD card.
+* While pressing the SETUP/RESET button, plug the device in (wait ~12 seconds, then release.)
+* When complete, the yellow LED should be blinking, remove power and insert FIRMWARE sd card.
 
-If you have a classic XiaoFang with a ARM-Processor, consider using https://github.com/samtap/fang-hacks
+## Setting up the FIRMWARE sd card
+* Create a 256MB primary partition on an SD card
+* Copy the firmware_mod contents onto the SD card
+* Modify /config files for Static IP if/as needed
 
-### Attention: Do not install the latest Firmware on your Device. It will disable the support of this hack. 
+### TO-DO LIST:
+* [ ] :warning: Create a watch-dog script to run in the background 24/7
+* [ ] :warning: Add to watch-dog: Networking (If loss of connection, AP Mode, etc.)
+* [ ] :warning: Add to watch-dog: ONVIF monitoring (if enabled)
+* [ ] :warning: Add to watch-dog: RTSP monitoring (if enabled)
+* [ ] :warning: Update /bin/motor to shut off ONVIF during motor movements, then back on (motor.bin is dead while ONVIF is running on PAN.)
+* [ ] :red_circle: Add autoexec boot script to check/repair dirty bit (P1 and P2)
+* [ ] :yellow_circle: Update Web GUI for additional camera dimensions/resolutions
+* [ ] :green_circle: Update Web GUI slider for ONVIF (always shows Not Running)
+* [ ] :green_circle: Add as much logging details as possible on runtime events (some cameras go offline for unknown reasons, etc.)
+* [ ] :green_circle: In DBG MODE, we'll want as many audible and visual responses to allow us to determine how far a device has reached.
 
-Further information about this topic can be found here: https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks/issues/669
-
-
-## How to install the CFW
-
-Before you try to install it, please read the [FAQ](/hacks/faq.md)
-
-After that, continue to the
-[Installation](/hacks/install_cfw.md)
-
-
-### Support
-
-If you encounter a problem, please see first if you find similiar open/closed issues. 
-Or ask in our [Gitter channel](https://gitter.im/Xiaomi-Dafang-Hacks/Lobby) for help.
-
-If you don't find anything related, feel free to open a new issue.
-If you/we solve your issue, please condense your gained insights into a pull request for continuous self-improvement.
-
-### Partner Community:
-
-We are really excited to announce that we have now a open source partner community, which provides a lot of content about the T10/T20/T30 Devices
-
-![Ebaina](/ebaina.png)
-
-Start here for more informations:
-http://bbs.ebaina.com/thread-53811-1-1.html
-
-欢迎来到这个存储库亲爱的朋友们。 从这里开始，获取关于在您的设备上获取此hack的教程：[开始](/hacks/install_cfw_cn.md)
+### FUTURE TO-DO LIST:
+* [ ] :green_circle: Replace the existing Web GUI with a more JS/JQ/BOOT friendly variant (and more visually appealing.)
+* [ ] :green_circle: Thorough testing of networking protocols/keys/etc. (WPA/WPA2) especially on DECO and TOMATO routers
+* [ ] :green_circle: Add to Web GUI a location to determine hot-spots, starting position (after resetting motor), etc.
+* [ ] :green_circle: Add the ability for a fast/slow PTZ "scan" of the area (left-right, height and min/max scan area)
+* [ ] :green_circle: Create a time based replacement for night vision on/off
 
 
 
-## Technical Information about the hack:
-
-Start [here](/hacks/technical.md)
-
-## Integration in Home Automation Systems:
-
-[Domoticz](/integration/domoticz/domoticz.md)
-
-[Home Assistant](/integration/homeassistant/homeassistant.md)
-
-[HomeKit](/integration/homekit/homekit.md)
-
-[OpenHab](https://community.openhab.org/t/how-to-configure-a-hacked-xiaomi-dafang-to-work-with-openhab/51121)
-
-[Synology](/integration/synology/synology.md)
-
-[tinyCam](/integration/tinycam/tinycam.md)
-
-[Zoneminder](/integration/zoneminder/zoneminder.md)
-
-## Other features
-
-### Motion detection
-
-It is possible to run your own scripts on motion detection. See [here](/integration/custom/motiondetection.md)
-
-## Contributions:
-
-Any contribution to the development is highly welcome. Simply open a pull request against our beta branch on GitHub.
