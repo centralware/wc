@@ -2,7 +2,8 @@
 
 This repository contains custom firmware for the following devices:
 
-Name | Picture | | Name | Picture+
+
+Name | Picture | | Name | Picture
 --- | --- | --- | --- | ---
 Wyzecam V2 | ![XiaoFang](/xiaofang.png) | | Wyzecam Pan | ![Dafang](/dafang.png)
 
@@ -17,7 +18,7 @@ Wyzecam V2 | ![XiaoFang](/xiaofang.png) | | Wyzecam Pan | ![Dafang](/dafang.png)
 * Modify /config files for Static IP if/as needed
 
 ### TO-DO LIST:
-* [ ] [!]ALL: Create a watch-dog script to run in the background 24/7
+* [ ] ALL: Create a watch-dog script to run in the background 24/7
 * [ ] ALL: Add to watch-dog: Networking (If loss of connection, AP Mode, etc.)
 * [ ] ALL: Add to watch-dog: ONVIF monitoring (if enabled)
 * [ ] ALL: Add to watch-dog: RTSP monitoring (if enabled)
@@ -29,13 +30,11 @@ Wyzecam V2 | ![XiaoFang](/xiaofang.png) | | Wyzecam Pan | ![Dafang](/dafang.png)
 * [ ] ALL: In DBG MODE, we'll want as many audible and visual responses to allow us to determine how far a device has reached.
 
 ### FUTURE TO-DO LIST:
+* [ ] ALL: Replace the existing update procedure (ZIP instead of one file at a time) from GIT and/or OTHER
+*      VERSION (URL and GIT fields) and ZIPFILE (URL as GIT fields) so we can host via GIT or SERVER
+*      TOKEN (Currently in SETTINGS) should be moved to the place WE DO UPDATES...  Just say'in!
 * [ ] ALL: Replace the existing Web GUI with a more JS/JQ/BOOT friendly variant (and more visually appealing.)
 * [ ] ANY: Thorough testing of networking protocols/keys/etc. (WPA/WPA2) especially on DECO and TOMATO routers
 * [ ] PAN: Add to Web GUI a location to determine hot-spots, starting position (after resetting motor), etc.
 * [ ] PAN: Add the ability for a fast/slow PTZ "scan" of the area (left-right, height and min/max scan area)
-* [ ] ALL: Create a time based replacement for night vision on/off
-* [ ] 
-* [ ] 
-* [ ] 
-* [ ] 
-
+* [ ] ALL: Create a time based replacement for automatic night vision (on/off times)
