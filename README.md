@@ -5,7 +5,7 @@ This repository contains custom firmware for the following devices:
 
 Name | Picture | | Name | Picture
 --- | --- | --- | --- | ---
-Wyzecam V2 | ![XiaoFang](/xiaofang.png) | | Wyzecam Pan | ![Dafang](/dafang.png)
+Wyzecam V2 | ![XiaoFang](/wyzev2.png) | | Wyzecam Pan | ![Dafang](/wyzepan.png)
 
 ## How to install the CFW (firmware hack)
 * Under /hacks locate the wyze model directory; rename to demo.bin and copy to the SD card.
