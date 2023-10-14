@@ -38,3 +38,4 @@ Wyzecam V2 | ![XiaoFang](/wyzev2.png) | | Wyzecam Pan | ![Dafang](/wyzepan.png)
 * [ ] PAN: Add to Web GUI a location to determine hot-spots, starting position (after resetting motor), etc.
 * [ ] PAN: Add the ability for a fast/slow PTZ "scan" of the area (left-right, height and min/max scan area)
 * [ ] ALL: Create a time based replacement for automatic night vision (on/off times)
+* [ ] ALL: Update WPA_SUPPLICANT (conf) to contain a PRIMARY, SECONDARY and CATCH ALL network (showing all settings)
