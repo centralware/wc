@@ -12,10 +12,11 @@ Wyzecam V2 | ![XiaoFang](/wyzev2.png) | | Wyzecam Pan | ![Dafang](/wyzepan.png)
 * While pressing the SETUP/RESET button, plug the device in (wait ~12 seconds, then release.)
 * When complete, the yellow LED should be blinking, remove power and insert FIRMWARE sd card.
 
-## Setting up the FIRMWARE sd card
-* Create a 256MB primary partition on an SD card
+## Setting up the long-term FIRMWARE (OS) sd card
+* Create a 256MB primary FAT32 partition on an SD card
 * Copy the firmware_mod contents onto the SD card
 * Modify /config files for Static IP if/as needed
+* Modify any other content needed, insert into device and boot
 
 ### TO-DO LIST:
 * [ ] ALL: Create a watch-dog script to run in the background 24/7
